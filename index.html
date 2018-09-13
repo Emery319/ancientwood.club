@@ -98,14 +98,17 @@
                         All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i>
                         by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </span>
-                        <span>Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash.com</a></span>
                     </small>
                 </p>
                 <ul>
-                    <li><a href="#"><i class="icon-facebook2"></i></a></li>
-                    <li><a href="#"><i class="icon-twitter2"></i></a></li>
-                    <li><a href="#"><i class="icon-instagram"></i></a></li>
-                    <li><a href="#"><i class="icon-linkedin2"></i></a></li>
+                    <li><a href="https://t.me/ancientwood"><i class="icon-telegram" style="color: deepskyblue;"></i></a>
+                    </li>
+                    <li><a href="https://twitter.com/Ancientwoxd"><i class="icon-twitter2"
+                                                                     style="color: cornflowerblue;"></i></a></li>
+                    <li><a href="http://music.163.com/#/user/home?id=79620448"><i class="icon-music2"
+                                                                                  style="color: red;"></i></a></li>
+                    <li><a href="https://www.instagram.com/ancientwoxd/"><i class="icon-instagram"
+                                                                            style="color: darkred;"></i></a></li>
                 </ul>
             </div>
 
@@ -475,7 +478,7 @@
                                 </div>
                             </div>
                         </div>
-                        <pre>
+                        <pre class="col-md-12 animate-box" data-animate-effect="fadeInTop">
             一个喷嚏冲出鼻子的速度是每小时100米；
             心脏每天跳100000下；
             女王蜂每天产1200只卵；
@@ -598,23 +601,24 @@
                                 <div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box"
                                      data-animate-effect="fadeInRight">
                                     <!--<form >-->
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Name" id="name" value="">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Email" id="email" value="">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Subject" id="subject" value="">
-                                        </div>
-                                        <div class="form-group">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Name" id="name" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Email" id="email" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Subject" id="subject"
+                                               value="">
+                                    </div>
+                                    <div class="form-group">
                                             <textarea name="" id="message" cols="30" rows="7" class="form-control"
                                                       placeholder="Message" value=""></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="submit" class="btn btn-primary btn-send-message"
-                                                   value="Send Message" onclick="sendMessage()">
-                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" class="btn btn-primary btn-send-message"
+                                               value="Send Message" onclick="sendMessage()">
+                                    </div>
                                     <!--</form>-->
                                 </div>
 
@@ -667,13 +671,15 @@
         var subject = $("#subject").val();
         var message = $("#message").val();
         var url = 'http://ancientwood.club/cgi-bin/send.cgi?subject=' + subject + '&message=' + message + '&name=' + name + '&email=' + email;
-        $.get(url,function () {
+        $.get(url, function () {
             myAlert('Tip', "Send Message Succeed!", function () {
             });
         })
     }
+    $.getJSON("//ip.wheff7.com/ipinfo", function(data) {
+        console.log(data)
+    });
 </script>
-
 </body>
 </html>
 
