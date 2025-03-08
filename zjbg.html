@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>报告详情</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .header-part1 {
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            border-bottom: 1px solid #ccc;
+        }
+        .header-part2 {
+            height: 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 20px;
+            border-bottom: 1px dashed #ccc;
+        }
+        .header-part2 .title {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .header-part2 .report-number {
+            font-size: 12px;
+            color: #999;
+        }
+        .header-part2 .report-number span {
+            color: black;
+        }
+        .header-part3 {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            background-color: #f0f8ff;
+            border-bottom: 1px solid #ccc;
+        }
+        .header-part3 .client-info {
+            font-size: 12px;
+            color: #999;
+        }
+        .header-part3 .client-info span {
+            color: black;
+        }
+        .content {
+            position: absolute;
+            top: 170px; /* 顶部三部分总高度 */
+            bottom: 50px;
+            left: 0;
+            right: 0;
+            overflow-y: auto; /* 允许上下滑动 */
+            padding: 10px;
+        }
+        .image-page {
+            width: 100%; /* 宽度随页面变化 */
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            display: block; /* 确保图片是块级元素 */
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #999;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-part1">报告详情</div>
+        <div class="header-part2">
+            <div class="title">织片</div>
+            <div class="report-number">报告编号：<span>Gw-2025-A00229</span></div>
+        </div>
+        <div class="header-part3">
+            <div class="client-info">委托单位：<span>桐乡宇成服饰有限公司</span></div>
+        </div>
+    </div>
+    <div class="content">
+        <img class="image-page" src="page1.png" alt="Page 1">
+        <img class="image-page" src="page2.png" alt="Page 2">
+        <img class="image-page" src="page3.png" alt="Page 3">
+    </div>
+    <div class="footer">国家毛针织品质量检验中心（浙江）</div>
+</body>
+</html>
